@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+:root {
+  --main-bg: #666;
+  --second-bg: #fff;
+}
+
+body {
+  align-items: center;
+  background-color: var(--main-bg);
+  display: grid;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  height: 90vh;
+}
+
+.main-text {
+  color: #fff;
+  text-align: center;
+  top: 5vh;
+}
+
+.calculator-container {
+  align-items: center;
+  display: grid;
+  grid-template-rows: 1fr 5fr;
+  grid-gap: 4vh;
+  justify-content: center;
+}
+
+.screen-container {
+  align-items: center;
+  background-color: var(--second-bg);
+  border: 3px solid red;
+  border-radius: 15px;
+  display: grid;
+  height: 100%;
+  justify-content: center;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.type-container {
+  display: grid;
+  grid-column-gap: -2vh;
+  grid-row-gap: 2vh;
+  grid-template: repeat(5, 1fr) / repeat(4, 1fr);
+  grid-template-areas:
+    "ac-container percent-container divide-container return-container "
+    "seven-container eight-container nine-container multiply-container "
+    "four-container five-container six-container minus-container "
+    "one-container two-container three-container plus-container "
+    "zero-container comma-container equal-container equal-container ";
+  height: 35vh;
+  width: 35vw;
+}
+
+.key-container {
+  align-items: center;
+  display: grid;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+}
+
+.key {
+  align-items: center;
+  background-color: var(--second-bg);
+  border: 3px solid red;
+  border-radius: 50%;
+  cursor: pointer;
+  display: grid;
+  height: 7vh;
+  justify-content: center;
+  width: 7vh;
+}
+
+.ac-container {
+  grid-area: ac-container;
+}
+.percent-container {
+  grid-area: percent-container;
+}
+.divide-container {
+  grid-area: divide-container;
+}
+.return-container {
+  grid-area: return-container;
+}
+.seven-container {
+  grid-area: seven-container;
+}
+.eight-container {
+  grid-area: eight-container;
+}
+.nine-container {
+  grid-area: nine-container;
+}
+.multiply-container {
+  grid-area: multiply-container;
+}
+.four-container {
+  grid-area: four-container;
+}
+.five-container {
+  grid-area: five-container;
+}
+.six-container {
+  grid-area: six-container;
+}
+.minus-container {
+  grid-area: minus-container;
+}
+.one-container {
+  grid-area: one-container;
+}
+.two-container {
+  grid-area: two-container;
+}
+.three-container {
+  grid-area: three-container;
+}
+.plus-container {
+  grid-area: plus-container;
+}
+.zero-container {
+  grid-area: zero-container;
+}
+.comma-container {
+  grid-area: comma-container;
+}
+.equal-container {
+  grid-area: equal-container;
+}
+.big-equal-key {
+  width: 14vh;
+}
+
+@media (max-width: 850px) {
+  body {
+    height: 100vh;
+  }
+  .type-container {
+    display: grid;
+    grid-gap: 2vh;
+
+    height: 50vh;
+    width: 50vw;
+  }
+}
