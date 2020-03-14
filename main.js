@@ -2,6 +2,13 @@ const screen = document.querySelector(".screen-container");
 const calculator = document.querySelector(".calculator-container");
 const ACKey = document.getElementById("ac");
 
+// Default Screen Content
+screen.innerText = "0";
+
+setTimeout(() => {
+  screen.innerText = "";
+}, 2500);
+
 // Print typed keys to Screen Calculator
 
 calculator.addEventListener("click", e => {

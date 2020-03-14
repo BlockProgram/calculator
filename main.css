@@ -12,7 +12,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 20px;
   justify-content: center;
-  height: 90vh;
+  height: 80vh;
 }
 
 .main-text {
@@ -27,15 +27,16 @@ body {
   grid-template-rows: 1fr 5fr;
   grid-gap: 4vh;
   justify-content: center;
+  place-self: center center;
 }
 
 .screen-container {
   align-items: center;
   background-color: var(--second-bg);
-  border: 3px solid red;
+  border: 3px solid #0b298b;
   border-radius: 15px;
   display: grid;
-  height: 100%;
+  height: 130%;
   justify-content: center;
   text-transform: uppercase;
   width: 100%;
@@ -43,9 +44,8 @@ body {
 
 .type-container {
   display: grid;
-  grid-column-gap: -2vh;
   grid-row-gap: 2vh;
-  grid-template: repeat(5, 1fr) / repeat(4, 1fr);
+  grid-template: repeat(5, 8vh) / repeat(4, 9vw);
   grid-template-areas:
     "ac-container percent-container divide-container return-container "
     "seven-container eight-container nine-container multiply-container "
@@ -67,13 +67,13 @@ body {
 .key {
   align-items: center;
   background-color: var(--second-bg);
-  border: 3px solid red;
+  border: 3px solid #0b298b;
   border-radius: 50%;
   cursor: pointer;
   display: grid;
-  height: 7vh;
+  height: 8vh;
   justify-content: center;
-  width: 7vh;
+  width: 8vh;
 }
 
 .ac-container {
@@ -138,14 +138,13 @@ body {
 }
 
 @media (max-width: 850px) {
-  body {
-    height: 100vh;
+  .calculator-container {
+    min-width: 600px;
+  }
+  .screen-container {
+    width: 110%;
   }
   .type-container {
-    display: grid;
-    grid-gap: 2vh;
-
-    height: 50vh;
-    width: 50vw;
+    grid-column-gap: 2vh;
   }
 }
