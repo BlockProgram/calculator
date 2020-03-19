@@ -43,10 +43,6 @@ calculator.addEventListener("click", e => {
   }
 });
 
-// 2) Detect keyboard input if I want to type directly, not click on screen
-// Use key fixed number like (t = 25) to create if ENTER, RETURN then ...
-// See past projects for use of it, 20 js WORD or HARDCODE ANTHO
-
 // Print typed Keys to calculator
 window.addEventListener("keyup", e => {
   // Print only numbers key from 0 to 9
@@ -65,7 +61,7 @@ window.addEventListener("keyup", e => {
     screen.innerText += e.key;
   }
 
-  // Delete one character when RETURN pressed
+  // Delete all characters when RETURN key pressed
   if (e.which === 8) {
     screen.innerText = "";
   }
