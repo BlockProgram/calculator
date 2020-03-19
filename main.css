@@ -138,13 +138,10 @@ body {
 }
 
 @media (max-width: 850px) {
-  .calculator-container {
-    min-width: 600px;
-  }
   .screen-container {
-    width: 110%;
+    min-width: 270px;
   }
   .type-container {
-    grid-column-gap: 2vh;
+    grid-template: repeat(5, 70px) / repeat(4, 70px);
   }
 }
