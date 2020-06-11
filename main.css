@@ -18,7 +18,7 @@ body {
 .main-text {
   color: #fff;
   text-align: center;
-  top: 5vh;
+  margin-top: 100px;
 }
 
 .calculator-container {
@@ -35,8 +35,9 @@ body {
   background-color: var(--second-bg);
   border: 3px solid #0b298b;
   border-radius: 15px;
+  box-sizing: border-box;
   display: grid;
-  height: 130%;
+  height: 80px;
   justify-content: center;
   text-transform: uppercase;
   width: 100%;
@@ -45,15 +46,13 @@ body {
 .type-container {
   display: grid;
   grid-row-gap: 2vh;
-  grid-template: repeat(5, 8vh) / repeat(4, 9vw);
+  grid-template: repeat(5, 100px) / repeat(4, 100px);
   grid-template-areas:
     "ac-container percent-container divide-container return-container "
     "seven-container eight-container nine-container multiply-container "
     "four-container five-container six-container minus-container "
     "one-container two-container three-container plus-container "
     "zero-container comma-container equal-container equal-container ";
-  height: 35vh;
-  width: 35vw;
 }
 
 .key-container {
@@ -71,9 +70,9 @@ body {
   border-radius: 50%;
   cursor: pointer;
   display: grid;
-  height: 8vh;
+  height: 80px;
   justify-content: center;
-  width: 8vh;
+  width: 80px;
 }
 
 .ac-container {
@@ -135,13 +134,4 @@ body {
 }
 .big-equal-key {
   width: 14vh;
-}
-
-@media (max-width: 850px) {
-  .screen-container {
-    min-width: 270px;
-  }
-  .type-container {
-    grid-template: repeat(5, 70px) / repeat(4, 70px);
-  }
 }
